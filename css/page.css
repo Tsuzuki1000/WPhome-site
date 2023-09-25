@@ -1,0 +1,316 @@
+@charset "UTF-8";
+
+html {
+  font-size: 100%;
+}
+
+body {
+  background: rgb(255, 255, 255);
+  font-family: "My Gothic Font", sans-serif;
+}
+
+a {
+  color: #121212;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+li {
+  list-style: none;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.section-title {
+  margin: 30px;
+  border: 1px solid #333;
+  padding: 10px;
+}
+
+.content {
+  padding: 20px;
+  margin-bottom: 60px;
+  border-bottom: 1px solid #333;
+}
+
+.thumbnail {
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+
+.thumbnail img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all .5s;
+}
+
+.container {
+  margin-left: 300px;
+}
+
+#header {
+  width: 300px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  background-color: rgb(60, 90, 139);
+  padding: 30px;
+  border-radius: 5px;
+}
+
+#header .site-title {
+  margin-bottom: 20px;
+  width: 200px;
+}
+
+#navi li {
+  margin-bottom: 10px;
+}
+
+#navi li a {
+  color: #fff;
+}
+
+#navi li a:hover {
+  opacity: 0.7;
+}
+
+.hero {
+  margin-bottom: 60px;
+  box-shadow:5px 5px 8px 3px rgb(206, 206, 206) inset;
+  position: relative;
+}
+
+.hero img {
+  width: 100%;
+  vertical-align: bottom;
+  object-fit: cover;
+  height: 100vh;
+  border-radius: 30px;
+}
+
+.hero .hero-text {
+  position: absolute;
+  top: 30%;
+  left: 12%;
+  width: 300px;
+  font-size: 26px;
+}
+
+/* footer */
+
+#footer {
+  background-color: rgb(27, 27, 30);
+  padding: 20px;
+}
+
+#footer ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+#footer .link {
+  width: 600px;
+  margin:  0 auto;
+}
+
+
+
+#footer li a {
+  color: #fff;
+}
+
+@media screen and (max-width: 767px) {
+
+  .container {
+    margin-left: 0;
+  }
+
+  #header {
+    width: 100%;
+    z-index: 10;
+    height: auto;
+    padding: 0;
+  }
+
+  .hamburger {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    position: fixed;
+    top: 22px;
+    right: 40px;
+    z-index: 20;
+  }
+
+  .hamburger span {
+    width: 50px;
+    height: 2px;
+    background-color: #333;
+    display: block;
+    position: absolute;
+    transition: .5s;
+  }
+
+  .hamburger span:nth-child(1) {
+    top: 8px;
+  }
+
+  .hamburger span:nth-child(2) {
+    top: 24px;
+  }
+
+  .hamburger span:nth-child(3) {
+    bottom: 8px;
+  }
+
+  .open .hamburger span:nth-child(1) {
+    transform: translateY(10px) rotate(-315deg);
+  }
+
+  .open .hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .open .hamburger span:nth-child(3) {
+    transform: translateY(-10px) rotate(315deg);
+  }
+
+
+  #navi {
+    background: rgb(60, 90, 139);
+    width: 300px;
+    padding: 30px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -300px;
+    overflow: auto;
+    opacity: 0;
+    z-index: 20;
+    transition: 0.3s;
+  }
+
+  .open #navi {
+    left: 0;
+    opacity: 1;
+  }
+
+  #navi .nav-menu {
+    margin-top: 60px;
+  }
+
+  #navi .nav-menu li {
+    margin-bottom: 40px;
+  }
+
+  #mask {
+    display: none;
+    transition: 0.5s;
+  }
+
+  .open #mask {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(60, 90, 139);
+    opacity: 0.7;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    cursor: pointer;
+    display: block;
+  }
+
+
+  .wrapper {
+    padding: 0 30px;
+  }
+
+  .about-me {
+    flex-direction: column;
+  }
+
+
+  .about-me .picture {
+    margin: 0 auto 30px;
+  }
+
+  .hero .hero-text {
+    position: absolute;
+    top: 30%;
+    left: 7%;
+    width: 300px;
+  }
+
+
+  .about-me .prof {
+    margin: 0 auto;
+  }
+
+  #product ul {
+    flex-direction: column;
+  }
+
+  #product {
+    margin-bottom: 0;
+  }
+
+  #product ul li {
+    width: 100%;
+    margin-bottom: 60px;
+  }
+
+  #product ul li img {
+    width: 100%;
+  }
+
+  #must-read {
+    margin-bottom: 0;
+  }
+
+  #must-read .must-read-article {
+    flex-direction: column;
+  }
+
+  #must-read .must-read-article article {
+    width: 100%;
+    margin-bottom: 60px;
+  }
+
+  #must-read .must-read-article article img {
+    width: 100%;
+  }
+
+  #blog {
+    margin-bottom: 60px;
+  }
+
+  #blog .blog-article {
+    flex-direction: column;
+  }
+
+  #blog .blog-article article {
+    width: 100%;
+    margin-bottom: 60px;
+  }
+
+  #blog .blog-article article img {
+    width: 100%;
+  }
+
+}
