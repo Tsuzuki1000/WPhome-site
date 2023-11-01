@@ -8,4 +8,4 @@
 スマホ用。
 
 
-<img src="https://github.com/Tsuzuki1000/WP-politics-matome/assets/100422646/b62e7609-5520-46cc-98ee-cc0924d755d1 width="600">
+<img src="https://github.com/Tsuzuki1000/WP-politics-matome/assets/100422646/b62e7609-5520-46cc-98ee-cc0924d755d1" width="600">
